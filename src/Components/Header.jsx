@@ -1,5 +1,11 @@
 import React from "react";
-import { FaFacebookF, FaTwitter, FaPinterestP, FaLinkedinIn, FaSearch } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaPinterestP,
+  FaLinkedinIn,
+  FaSearch,
+} from "react-icons/fa";
 
 const Header = () => {
   return (
@@ -7,13 +13,15 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         {/* Logo */}
         <div className="text-2xl font-bold">
-          <span className="lowercase">media</span>
-          <span className="uppercase">hub.</span>
+          <span className="uppercase text-blue-800">ecs</span>
+          <span className="uppercase text-blue-800"> Nepal</span>
+          <br />
+          <legend className="text-xs ml-3 text-red-600 uppercase">The Nepali Way</legend>
         </div>
 
         {/* Navigation Menu */}
         <nav className="hidden md:flex space-x-6">
-          {["HOME", "OUR WORK", "SERVICES", "ABOUT US", "BLOG", "CONTACT US"].map((item, index) => (
+          {["HOME", "OUR WORK", "SERVICES", "ABOUT US"].map((item, index) => (
             <a
               key={index}
               href={`#${item.toLowerCase().replace(" ", "-")}`}
