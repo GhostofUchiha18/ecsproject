@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import 'flowbite';
+import 'bootstrap-icons/font/bootstrap-icons.css'; // Make sure to install and import Bootstrap icons
 
 function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -15,10 +16,19 @@ function Header() {
         <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
-              <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+              <img src="./images/logo.png" className="h-6" alt="Flowbite Logo" />
             </a>
-            <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <div className="flex md:order-2 space-x-3 rtl:space-x-reverse">
+              {/* Social Media Icons */}
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <i className="bi bi-facebook text-blue-700 text-2xl hover:text-blue-800"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <i className="bi bi-instagram text-pink-500 text-2xl hover:text-pink-600"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <i className="bi bi-twitter text-blue-400 text-2xl hover:text-blue-500"></i>
+              </a>
               <button
                 type="button"
                 onClick={toggleSidebar}
@@ -93,8 +103,8 @@ function Header() {
             isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
         >
-          <div className="p-4">
-            <h2 className="text-lg font-bold">Sidebar Menu</h2>
+          <div className="p-4 relative top-2">
+          <img src="./images/logo.png" className="h-6" alt="Flowbite Logo" />
             <ul className="mt-4 space-y-2">
               <li>
                 <a href="#" className="block px-4 py-2 hover:bg-gray-700 rounded">
@@ -120,7 +130,7 @@ function Header() {
           </div>
           <button
             onClick={toggleSidebar}
-            className="absolute top-4 right-4 text-gray-400 hover:text-white"
+            className="absolute top-6 right-4 text-gray-400 hover:text-white"
           >
             Close
           </button>
