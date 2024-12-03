@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import 'flowbite';
-import 'bootstrap-icons/font/bootstrap-icons.css'; // Make sure to install and import Bootstrap icons
+import React, { useState } from "react";
+import "flowbite";
+import "bootstrap-icons/font/bootstrap-icons.css"; // Make sure to install and import Bootstrap icons
 
 function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -13,21 +13,40 @@ function Header() {
     <>
       <section>
         {/* Navbar */}
-        <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+        <nav className="bg-white dark:bg-gray-900 fixed  w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="https://flowbite.com/" className="flex items-center space-x-3 rtl:space-x-reverse">
-              <img src="./images/logo.png" className="h-6" alt="Flowbite Logo" />
+            <a
+              href="https://flowbite.com/"
+              className="flex items-center space-x-3 rtl:space-x-reverse"
+            >
+              <img
+                src="./images/logo.png"
+                className="h-6"
+                alt="Flowbite Logo"
+              />
             </a>
-            <div className="flex md:order-2 space-x-3 rtl:space-x-reverse">
+            <div className="flex items-center md:order-2 space-x-3 rtl:space-x-reverse">
               {/* Social Media Icons */}
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                <i className="bi bi-facebook text-blue-700 text-2xl hover:text-blue-800"></i>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="bi bi-facebook text-blue-700 text-xl md:text-2xl hover:text-blue-800"></i>
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                <i className="bi bi-instagram text-pink-500 text-2xl hover:text-pink-600"></i>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="bi bi-instagram text-pink-500 text-xl md:text-2xl hover:text-pink-600"></i>
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <i className="bi bi-twitter text-blue-400 text-2xl hover:text-blue-500"></i>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="bi bi-twitter text-blue-400 text-xl md:text-2xl hover:text-blue-500"></i>
               </a>
               <button
                 type="button"
@@ -99,30 +118,41 @@ function Header() {
 
         {/* Sidebar */}
         <div
-          className={`fixed top-0 left-0 z-40 w-64 h-full bg-gray-800 text-white transition-transform transform ${
-            isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+          className={`fixed top-[73px] left-0 z-40 w-64 h-full bg-gray-800 text-white transition-transform transform ${
+            isSidebarOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
-          <div className="p-4 relative top-2">
-          <img src="./images/logo.png" className="h-6" alt="Flowbite Logo" />
-            <ul className="mt-4 space-y-2">
+          <div className="p-4 relative">
+            <ul className="space-y-2">
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-700 rounded">
+                <a
+                  href="#"
+                  className="block px-4 py-2 hover:bg-gray-700 rounded"
+                >
                   Dashboard
                 </a>
               </li>
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-700 rounded">
+                <a
+                  href="#"
+                  className="block px-4 py-2 hover:bg-gray-700 rounded"
+                >
                   Profile
                 </a>
               </li>
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-700 rounded">
+                <a
+                  href="#"
+                  className="block px-4 py-2 hover:bg-gray-700 rounded"
+                >
                   Settings
                 </a>
               </li>
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-700 rounded">
+                <a
+                  href="#"
+                  className="block px-4 py-2 hover:bg-gray-700 rounded"
+                >
                   Logout
                 </a>
               </li>
@@ -130,9 +160,9 @@ function Header() {
           </div>
           <button
             onClick={toggleSidebar}
-            className="absolute top-6 right-4 text-gray-400 hover:text-white"
+            className="absolute top-4 right-4 text-gray-400 hover:text-white"
           >
-            Close
+            <i class=" text-white text-2xl bi bi-x-square"></i>
           </button>
         </div>
       </section>
