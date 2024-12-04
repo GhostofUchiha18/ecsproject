@@ -5,7 +5,11 @@ module.exports = {
     "./node_modules/flowbite/**/*.js" // Include Flowbite's components
   ],
   theme: {
-    extend: {},
+    extend: {      fontFamily: {
+      minion: ['Minion Pro', 'serif'], 
+      graphik: ['Graphik', 'sans-serif'], // Use the font name you defined in @font-face
+    },
+  },
   },
   plugins: [
     require('flowbite/plugin')
