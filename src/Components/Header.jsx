@@ -13,17 +13,12 @@ function Header() {
     <>
       <section>
         {/* Navbar */}
-        <nav className="bg-white dark:bg-gray-900 fixed  w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+        <nav className="bg-white dark:bg-gray-900 fixed  w-full z-20 top-0 le start-0 border-b border-gray-200 dark:border-gray-600">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a
               href="#"
               className="flex items-center space-x-3 rtl:space-x-reverse"
             >
-              <img
-                src="./images/logo.png"
-                className="h-6"
-                alt="#"
-              />
             </a>
             <div className="flex items-center md:order-2 space-x-3 rtl:space-x-reverse">
               {/* Social Media Icons */}
@@ -51,7 +46,7 @@ function Header() {
               <button
                 type="button"
                 onClick={toggleSidebar}
-                className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 absolute left-4 top-2"
                 aria-controls="navbar-sticky"
                 aria-expanded={isSidebarOpen}
               >
@@ -118,16 +113,22 @@ function Header() {
 
         {/* Sidebar */}
         <div
-          className={`fixed top-[73px] left-0 z-40 w-64 h-full bg-gray-800 text-white transition-transform transform ${
+          className={`fixed top-0 left-0 z-40 w-64 h-full bg-white text-black transition-transform transform ${
             isSidebarOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
           <div className="p-4 relative">
+          <a
+              href="#"
+              className="flex items-center space-x-3 rtl:space-x-reverse"
+            >
+              <img src="./images/logo.png" className="h-8" alt="#" />
+            </a>
             <ul className="space-y-2">
               <li>
                 <a
                   href="#"
-                  className="block px-4 py-2 hover:bg-gray-700 rounded"
+                  className="block px-4 py-2 mt-4 hover:bg-slate-300 rounded"
                 >
                   Dashboard
                 </a>
@@ -135,7 +136,7 @@ function Header() {
               <li>
                 <a
                   href="#"
-                  className="block px-4 py-2 hover:bg-gray-700 rounded"
+                  className="block px-4 py-2 hover:bg-slate-300 rounded"
                 >
                   Profile
                 </a>
@@ -143,7 +144,7 @@ function Header() {
               <li>
                 <a
                   href="#"
-                  className="block px-4 py-2 hover:bg-gray-700 rounded"
+                  className="block px-4 py-2 hover:bg-slate-300 rounded"
                 >
                   Settings
                 </a>
@@ -151,7 +152,7 @@ function Header() {
               <li>
                 <a
                   href="#"
-                  className="block px-4 py-2 hover:bg-gray-700 rounded"
+                  className="block px-4 py-2 hover:bg-slate-300 rounded"
                 >
                   Logout
                 </a>
@@ -160,9 +161,9 @@ function Header() {
           </div>
           <button
             onClick={toggleSidebar}
-            className="absolute top-4 right-4 text-gray-400 hover:text-white"
+            className="absolute top-3 right-4 text-black hover:text-black"
           >
-            <i class=" text-white text-2xl bi bi-x-square"></i>
+            <i class=" text-black font-bold text-3xl bi bi-x"></i>
           </button>
         </div>
       </section>

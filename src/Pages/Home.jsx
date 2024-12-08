@@ -15,18 +15,14 @@ function Home() {
           className="mySwiper"
         >
           <SwiperSlide>
-            <div className="container mx-auto font-minion justify-center items-center px-4">
+            <div className="container mx-auto font-minion justify-center text-white font-bold items-center px-4">
               <center>
-                <img className="h-[800px]" src="./images/dan.jpg" alt="" />
+                <img className=" xl:hidden" src="./images/dan.jpg" alt="" />
               </center>
 
               <center>
-                <p className="lg:ml-80 lg:mr-80 mt-4 sm:items-center">
-                  Nepal, a small landlocked country nestled in the heart of the
-                  Himalayas, is known for its unique and vibrant culture. With a
-                  history spanning thousands of years, Nepal’s culture is a
-                  beautiful blend of ancient traditions, religious diversity, and
-                  ethnic variety.
+                <p className="lg:ml-80 lg:mr-80 mt-4 sm:items-center absolute top-[70%] mr-8 ml-8 xl:hidden">
+                  Nepal, a small landlocked country nestled in the heart of the Himalayas, is known for its unique and vibrant culture. With a history spanning thousands of years, Nepal’s culture is a beautiful blend of ancient traditions, religious diversity, and ethnic variety.
                 </p>
               </center>
             </div>
